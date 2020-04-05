@@ -1,0 +1,59 @@
+body{
+    background: url(img.png);
+}
+
+
+.title{
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    margin: -50px;
+}
+
+.subtitle{
+    font-size: 16px;
+    text-align: center;
+}
+
+
+.bar{
+    background-color: rgba(95,202,208,0.85);
+    color: rgba(95,202,208,0.85);
+    padding: 3px;
+    margin: 3px;
+    border: 1px solid;
+    border-radius: 0px;
+    display: block;
+    width: 400px;
+    margin-top: 30px;
+}
+
+.bars{
+    opacity: 4;
+    color: rgb(255, 255, 255);
+    outline: none;
+    background: none;
+    border: none;
+    padding: 3px;
+    width: 390px;
+}
+
+
+.r{
+    font-weight: bold;
+}
+
+
+.left{
+    float: left;
+    
+}
+
+.right{
+    float: right;
+    margin-top: 12px;
+}
+
+.bars:focus{
+    background-color: rgba(36, 194, 194, 1);
+}
