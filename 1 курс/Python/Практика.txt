@@ -1,0 +1,22 @@
+from functools import update_wrapper
+import random
+import string
+
+    
+def repeat_function(n):
+    def repeat_function_inner(f):
+        update_wrapper(repeat_function_inner, f)
+
+        def inner(*args, **kwargs):
+            for i in range(n):
+                f(*args, **kwargs)
+        return inner
+    return repeat_function_inner
+
+@repeat_function(100)
+def generate_alphanum_random_string(length):
+    letters_and_digits = string.ascii_letters + string.digits
+    rand_string = ''.join(random.sample(letters_and_digits, length))
+    print("Код сотрудника:", rand_string)
+
+generate_alphanum_random_string(4)

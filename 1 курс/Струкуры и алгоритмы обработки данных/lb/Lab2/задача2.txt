@@ -1,0 +1,12 @@
+import random
+
+r = 0
+z = [random.randint(1, 10) for i in range(10)]
+print("Массив: ", end='')
+print(*z)
+
+for i in range(len(z)-1):
+    if z[i] < i and z[i+1] > i:
+        r += 1
+    
+print(r) 

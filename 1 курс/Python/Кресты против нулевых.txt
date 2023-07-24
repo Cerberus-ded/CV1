@@ -1,0 +1,79 @@
+mat=[['_' for j in range(3)] for i in range(3)]
+hodov=9
+win=False
+hod="X"
+def xin():
+    global win
+    if mat[0][0]=="X" and mat[0][1]=="X" and mat[0][2]=="X":
+        win=True
+        print(f'Победа Питерских Крестов X')
+    if mat[1][0]=="X" and mat[1][1]=="X" and mat[1][2]=="X":
+        win=True
+        print(f'Победа Питерских Крестов X')
+    if mat[2][0]=="X" and mat[2][1]=="X" and mat[2][2]=="X":
+        win=True
+        print(f'Победа Питерских Крестов X')
+    if mat[0][0]=="X" and mat[1][0]=="X" and mat[2][0]=="X":
+        win=True
+        print(f'Победа Питерских Крестов X')
+    if mat[0][1]=="X" and mat[1][1]=="X" and mat[2][1]=="X":
+        win=True
+        print(f'Победа Питерских Крестов X')
+    if mat[0][2]=="X" and mat[1][2]=="X" and mat[2][2]=="X":
+        win=True
+        print(f'Победа Питерских Крестов X')
+    if mat[0][0]=="X" and mat[1][1]=="X" and mat[2][2]=="X":
+        win=True
+        print(f'Победа Питерских Крестов X')
+    if mat[0][2]=="X" and mat[1][1]=="X" and mat[2][0]=="X":
+        win=True
+        print(f'Победа Питерских Крестов X')
+    if mat[0][0]=="0" and mat[0][1]=="0" and mat[0][2]=="0":
+        win=True
+        print(f'Победа Нулевых 0')
+    if mat[1][0]=="0" and mat[1][1]=="0" and mat[1][2]=="0":
+        win=True
+        print(f'Победа Нулевых 0')
+    if mat[2][0]=="0" and mat[2][1]=="0" and mat[2][2]=="0":
+        win=True
+        print(f'Победа Нулевых 0')
+    if mat[0][0]=="0" and mat[1][0]=="0" and mat[2][0]=="0":
+        win=True
+        print(f'Победа Нулевых 0')
+    if mat[0][1]=="0" and mat[1][1]=="0" and mat[2][1]=="0":
+        win=True
+        print(f'Победа Нулевых 0')
+    if mat[0][2]=="0" and mat[1][2]=="0" and mat[2][2]=="0":
+        win=True
+        print(f'Победа Нулевых 0')
+    if mat[0][0]=="0" and mat[1][1]=="0" and mat[2][2]=="0":
+        win=True
+        print(f'Победа Нулевых 0')
+    if mat[0][2]=="0" and mat[1][1]=="0" and mat[2][0]=="0":
+        win=True
+        print(f'Победа Нулевых 0')
+        
+while hodov>0:
+    stroka=int(input('Введите строку: '))-1
+    stolbec=int(input('Введите столбец: '))-1
+    while stroka<0 or stroka>2 or stolbec<0 or stolbec>2:
+        stroka=int(input('Введите строку: '))-1
+        stolbec=int(input('Введите столбец: '))-1
+    while mat[stroka][stolbec]!="_":
+        stroka=int(input('Введите строку: '))-1
+        stolbec=int(input('Введите столбец: '))-1
+    mat[stroka][stolbec]=hod
+    if hod=="X":
+        hod="0"
+    elif hod=="0":
+        hod="X"
+    hodov-=1
+    for x in range (3):
+        for y in range (3):
+            print(mat[x][y],end=' ')
+        print()
+    xin()
+if win==False:
+    print('Ничья')
+    
+    

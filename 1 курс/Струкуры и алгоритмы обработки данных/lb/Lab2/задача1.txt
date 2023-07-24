@@ -1,0 +1,13 @@
+import random
+
+r = []
+z = [random.randint(1, 100) for i in range(10)]
+print("Массив: ", end='')
+print(*z)
+
+for i in range(1, len(z)-1):
+    if z[i-1] < z[i] and z[i] > z[i+1]:
+        r.append(z[i])
+        
+print("Слева и справа наименьшие числа: ", end=' ')
+print(*r)

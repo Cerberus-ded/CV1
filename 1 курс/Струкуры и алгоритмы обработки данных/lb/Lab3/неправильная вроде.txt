@@ -1,0 +1,9 @@
+import math
+
+def fl(x):
+    n = 1000.0
+    return n * ((x ** (1/n)) - 1)
+    
+x = float(input())
+print(fl(x))
+print(math.log(x, math.e))

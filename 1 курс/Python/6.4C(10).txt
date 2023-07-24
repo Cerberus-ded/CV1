@@ -1,0 +1,22 @@
+N=int(input())
+M=N
+Q=M
+N=Q
+K=0
+s=0
+while N>0:
+    N=N//10
+    K=K+1
+print (K)
+while M>0:
+    Z=M%10
+    M=M//10
+    print(Z)
+    s=s+Z*10**(K-1)
+    K=K-1
+    
+print (s) 
+if Q==s:
+    print ('Палиндром')
+else:
+    print('Не Палиндром')

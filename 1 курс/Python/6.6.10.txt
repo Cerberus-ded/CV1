@@ -1,0 +1,13 @@
+def factorial(n):
+    f,s,i=1,1,1
+    while (i<=n):
+        if i==1:
+            f=1
+        else:
+            f=f*i*(i-1)
+        print(f)
+        s+=f
+        i+=2
+    return s
+    
+print(factorial(9))

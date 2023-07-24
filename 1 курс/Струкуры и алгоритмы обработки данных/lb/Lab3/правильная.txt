@@ -1,0 +1,21 @@
+import math
+x = float(input('Введите x'))
+e = float(input('Введите погрешность e'))
+while (x<=0) or (x>2) or e<=0:
+    x = float(input('Введите x'))
+    e = float(input('Введите e'))
+s = math.log(x)
+count = 0
+p = 1
+s1 = (x-1)
+x0=(x-1)
+while abs(s - s1) > e and count < 1000:
+    x0=x0*(x-1)
+    p += 1
+    count += 1
+    if p%2==0:
+        s1 -= x0 / p
+    else:
+        s1 += x0 / p
+    print(s1)    
+print('s = ',s,'s1=',s1,'count = ', count)

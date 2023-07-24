@@ -1,0 +1,16 @@
+import random
+array=[]
+count=0
+m = int(input("Введите m: "))
+n = int(input("Введите размер массива: "))
+for i in range(n):
+    array.append(random.randint(0, 100))
+print("Массив:", array)
+for i in range(n):
+    if array[i] == m*m:
+        count = count + 1
+print("Квадрат числа m:", m*m)
+if count == 0:
+    print("Совпадений в массиве нет!")
+else:
+    print("Совпадений в массиве:", count)

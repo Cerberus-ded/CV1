@@ -1,0 +1,16 @@
+import random
+p=int(input('введите число р '))
+
+mat=[[random.randint(-50,50) for j in range(5)] for i in range(5)]
+for i in range(5):
+    print()
+    for j in range(5):
+        print(mat[i][j], end=' ')
+
+print()
+for i in range(5):
+    count=0 
+    for j in range(5):
+        if p>=mat[i][j]:
+            count+=1 
+    print(count)

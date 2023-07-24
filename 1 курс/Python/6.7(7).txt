@@ -1,0 +1,15 @@
+import random
+array=[]
+z = int(input( ))
+n = int(input( )) #длина массива
+count=0 
+
+for i in range(n):
+    a = random.randint(10,99)
+    array.append(a)
+    print(array[i], end=' ')
+    if array[i] > z:
+        array[i] = z
+        count+=1
+print(array)
+print('',count,sep='\n')
